@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" type="image/png" href="img/icon.png" />
+  <title>الصفحة الرئيسية - Project OHI</title>
+</head>
+<body>
+  <header>
+    <div class="left-controls">
+      <div class="switch-wrapper">
+        <img src="img/darkmode.png" alt="dark mode" class="switch-icon">
+        <label class="switch">
+          <input type="checkbox" id="darkMode">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="switch-wrapper">
+        <img src="img/lang.png" alt="lang" class="switch-icon">
+        <label class="switch">
+          <input type="checkbox" id="lang">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="right-controls" id="tup">
+  <div class="user-menu">
+    <img src="img/logo.jpg" alt="Profile" class="profile-img">
+    <br>
+    <span id="userName">User</span>
+  </div>
+</div>
+  </header>
+
+  <div class="course-container">
+    <div class="course-header">
+      <img src="img/html.png" alt="HTML Icon" class="thumbnail">
+      <h1 id="courseTitle">HTML Course for Beginners</h1>
+    </div>
+
+    <div class="section">
+      <h3 id="htmlStructureTitle">HTML File Structure HTML</h3>
+      <p id="htmlStructureDesc">The basic structure of any HTML page consists of the following elements:&gt; <html>,&gt; <head>,&gt; and&gt; <body>.: <b>&lt;html&gt;</b>, <b>&lt;head&gt;</b>,and<b>&lt;body&gt;</b>.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <button class="try-btn" onclick="showTryIt('htmlStructure')">Try It Yourself</button>
+      <div id="try-htmlStructure" class="try-area">
+        <textarea id="code-htmlStructure">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+        <button onclick="runCode('htmlStructure')">Run</button>
+        <iframe id="result-htmlStructure" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="headingsTitle">Headings</h3>
+      <p id="headingsDesc">Headings are used to define the importance of text, from <b>&lt;h1&gt;</b> (largest) to <b>&lt;h6&gt;</b> (smallest).</p>
+      <pre><code>&lt;h1 style="color: red;"&gt;Hello World! 1&lt;/h1&gt;
+&lt;h2 style="color: blue;"&gt;Hello World! 2&lt;/h2&gt;
+&lt;h3 style="color: green;"&gt;Hello World! 3&lt;/h3&gt;
+&lt;h4 style="color: purple;"&gt;Hello World! 4&lt;/h4&gt;
+&lt;h5 style="color: orange;"&gt;Hello World! 5&lt;/h5&gt;
+&lt;h6 style="color: brown;"&gt;Hello World! 6&lt;/h6&gt;</code></pre>
+      <h1 style="color: red;">Hello World! 1</h1>
+      <h2 style="color: blue;">Hello World! 2</h2>
+      <h3 style="color: green;">Hello World! 3</h3>
+      <h4 style="color: purple;">Hello World! 4</h4>
+      <h5 style="color: orange;">Hello World! 5</h5>
+      <h6 style="color: brown;">Hello World! 6</h6>
+      <button class="try-btn" onclick="showTryIt('headings')">Try It Yourself</button>
+      <div id="try-headings" class="try-area">
+        <textarea id="code-headings">&lt;h1 style="color: red;"&gt;Hello World! 1&lt;/h1&gt;
+&lt;h2 style="color: blue;"&gt;Hello World! 2&lt;/h2&gt;
+&lt;h3 style="color: green;"&gt;Hello World! 3&lt;/h3&gt;
+&lt;h4 style="color: purple;"&gt;Hello World! 4&lt;/h4&gt;
+&lt;h5 style="color: orange;"&gt;Hello World! 5&lt;/h5&gt;
+&lt;h6 style="color: brown;"&gt;Hello World! 6&lt;/h6&gt;</textarea>
+        <button onclick="runCode('headings')">Run</button>
+        <iframe id="result-headings" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="brTitle">Line Break</h3>
+      <p id="brDesc">The <b>&lt;br&gt;</b> tag  creates a line break without starting a new paragraph.</p>
+      <pre><code>Line 1&lt;br&gt;Line 2</code></pre>
+      <p>Line 1<br>Line 2</p>
+      <button class="try-btn" onclick="showTryIt('br')">Try It Yourself</button>
+      <div id="try-br" class="try-area">
+        <textarea id="code-br">Line 1&lt;br&gt;Line 2</textarea>
+        <button onclick="runCode('br')">Run</button>
+        <iframe id="result-br" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="listsTitle">Lists</h3>
+      <p id="listsDesc"><b>&lt;ul&gt;</b>  creates an unordered list (bullets), and <b>&lt;ol&gt;</b> creates an ordered list (numbers).</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+  &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      <ol>
+        <li>Step 1</li>
+        <li>Step 2</li>
+      </ol>
+      <button class="try-btn" onclick="showTryIt('lists')">Try It Yourself</button>
+      <div id="try-lists" class="try-area">
+        <textarea id="code-lists">&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+  &lt;li&gt;Step 2&lt;/li&gt;
+&lt;/ol&gt;</textarea>
+        <button onclick="runCode('lists')">Run</button>
+        <iframe id="result-lists" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="tableTitle">Tables</h3>
+      <p id="tableDesc"><b>&lt;table&gt;</b> creates a table, and border, bordercolor, bgcolor add styling.</p>
+      <pre><code>&lt;table border="1" bordercolor="blue" bgcolor="lightyellow"&gt;
+  &lt;tr&gt;&lt;td&gt;Cell 1&lt;/td&gt;&lt;td&gt;Cell 2&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Cell 3&lt;/td&gt;&lt;td&gt;Cell 4&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      <table border="1" bordercolor="blue" bgcolor="lightyellow">
+        <tr><td>Cell 1</td><td>Cell 2</td></tr>
+        <tr><td>Cell 3</td><td>Cell 4</td></tr>
+      </table>
+      <button class="try-btn" onclick="showTryIt('table')">Try It Yourself</button>
+      <div id="try-table" class="try-area">
+        <textarea id="code-table">&lt;table border="1" bordercolor="blue" bgcolor="lightyellow"&gt;
+  &lt;tr&gt;&lt;td&gt;Cell 1&lt;/td&gt;&lt;td&gt;Cell 2&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Cell 3&lt;/td&gt;&lt;td&gt;Cell 4&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</textarea>
+        <button onclick="runCode('table')">Run</button>
+        <iframe id="result-table" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="imgTitle">Images</h3>
+      <p id="imgDesc"><b>&lt;img&gt;</b> adds an image, and height, width, border, bordercolor add styling.</p>
+      <pre><code>&lt;img src="img/logo.jpg" height="100" width="100" border="2" bordercolor="green"&gt;</code></pre>
+      <img src="img/logo.jpg" height="100" width="100" border="2" bordercolor="green"><br>
+      <button class="try-btn" onclick="showTryIt('img')">Try It Yourself</button>
+      <div id="try-img" class="try-area">
+        <textarea id="code-img">&lt;img src="img/logo.jpg" height="100" width="100" border="2" bordercolor="green"&gt;</textarea>
+        <button onclick="runCode('img')">Run</button>
+        <iframe id="result-img" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="iframeTitle">Video/Audio</h3>
+      <p id="iframeDesc"><b>&lt;iframe&gt;</b> adds external content like videos, and width, height define the size.</p>
+      <pre><code>&lt;iframe width="300" height="200" src="https://www.youtube.com/watch?v=6QAELgirvjs&gt;&list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji"&gt;&lt;/iframe&gt;</code></pre>
+      <iframe width="300" height="200" src="https://www.youtube.com/watch?v=6QAELgirvjs&list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji"></iframe><br>
+      <button class="try-btn" onclick="showTryIt('iframe')">Try It Yourself</button>
+      <div id="try-iframe" class="try-area">
+        <textarea id="code-iframe">&lt;iframe width="300" height="200" src="https://www.youtube.com/watch?v=6QAELgirvjs&list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji"&gt;&lt;/iframe&gt;</textarea>
+        <button onclick="runCode('iframe')">Run</button>
+        <iframe id="result-iframe" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 id="textFormattingTitle">Text Formatting</h3>
+      <p id="textFormattingDesc">These tags are used for text formatting: <b>&lt;p&gt;</b>, <b>&lt;b&gt;</b>, <b>&lt;u&gt;</b>, <b>&lt;i&gt;</b>, <b>&lt;sub&gt;</b>, <b>&lt;sup&gt;</b>, <b>&lt;big&gt;</b>, <b>&lt;small&gt;</b>.</p>
+      <pre><code>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt;, &lt;u&gt;underlined&lt;/u&gt;, &lt;i&gt;italic&lt;/i&gt;, H&lt;sub&gt;2&lt;/sub&gt;O, X&lt;sup&gt;2&lt;/sup&gt;, &lt;big&gt;big&lt;/big&gt;, and &lt;small&gt;small&lt;/small&gt;.&lt;/p&gt;</code></pre>
+      <p>This is <b>bold</b>, <u>underlined</u>, <i>italic</i>, H<sub>2</sub>O, X<sup>2</sup>, <big>big</big>, and <small>small</small>.</p>
+      <button class="try-btn" onclick="showTryIt('textFormatting')">Try It Yourself</button>
+      <div id="try-textFormatting" class="try-area">
+        <textarea id="code-textFormatting">&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt;, &lt;u&gt;underlined&lt;/u&gt;, &lt;i&gt;italic&lt;/i&gt;, H&lt;sub&gt;2&lt;/sub&gt;O, X&lt;sup&gt;2&lt;/sup&gt;, &lt;big&gt;big&lt;/big&gt;, and &lt;small&gt;small&lt;/small&gt;.&lt;/p&gt;</textarea>
+        <button onclick="runCode('textFormatting')">Run</button>
+        <iframe id="result-textFormatting" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+          <a id="up" class="up" href="#tup">UP</a>
+  <script src="script/home.js"></script>
+</body>
+</html>

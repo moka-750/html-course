@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <title>تسجيل الدخول - Project OHI</title>
+  <link rel="icon" type="image/png" href="img/icon.png" />
+</head>
+<body>
+  <header>
+    <div class="left-controls">
+      <div class="switch-wrapper">
+        <img src="img/darkmode.png" alt="dark mode" class="switch-icon">
+        <label class="switch">
+          <input type="checkbox" id="darkMode">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="switch-wrapper">
+        <img src="img/lang.png" alt="lang" class="switch-icon">
+        <label class="switch">
+          <input type="checkbox" id="lang">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+      <div class="right-controls">
+      <img src="img/logo.jpg" alt="Logo" class="logo">
+    </div>
+  </header>
+  <div class="login-container">
+    <h2 id="loginTitle">Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label id="e" for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group password-group">
+        <label id="p" for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="toggle-password" id="togglePassword">
+        </span>
+      </div>
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+    <p id="errorMessage" class="error-message"></p>
+    <p id="successMessage" class="success-message"></p>
+  </div>
+  <script src="script/login.js"></script>
+</body>
+</html>
