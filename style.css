@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+    direction: rtl;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #fff;
+}
+body.dark-mode header {
+  background-color: #1f1f1f;
+}
+.left-controls,
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+.switch-icon {
+  height: 20px;
+  width: 20px;
+}
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.signup,
+.login,
+.ghost,
+.about,
+.feedback{
+  text-align: center;
+  padding: 15px 10px;
+  display: inline-block;
+  width: 100px;
+  margin: 15px 40px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.about{
+    position: fixed;
+    left: 5px;
+    bottom: 10px;
+    transform: translate(-25px, 10px);
+}
+.feedback{
+  position: fixed;
+  right:  5px;
+  bottom: 10px;
+  transform: translate(25px, 10px);
+}
+body.dark-mode .btn {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.des {
+  border: 5px solid #2196F3;
+  border-radius: 40px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  margin: 30px 9%;
+}
+
+body.dark-mode .des {
+  border-color: #2196F3;
+}
+.center-content {
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 12px 20px;
+  }
+
+  .left-controls,
+  .right-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .des {
+    margin: 20px 5%;
+    font-size: 1.3em;
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 480px) {
+ 
+  
+  .switch {
+    width: 36px;
+    height: 20px;
+  }
+
+  .slider:before {
+    height: 14px;
+    width: 14px;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+
+  .switch-icon {
+    height: 18px;
+    width: 18px;
+  }
+}
+#webox{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-100px, -50px);
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    z-index: 999;
+    border-radius: 15px;
+    display: none;
+}
+#clsbtn{
+    margin-top: 10px;
+    padding: 6px 13px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
